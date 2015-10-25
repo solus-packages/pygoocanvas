@@ -1,0 +1,25 @@
+name       : pygoocanvas
+version    : 0.14.1
+release    : 1
+source     :
+    - http://ftp.gnome.org/pub/gnome/sources/pygoocanvas/0.14/pygoocanvas-0.14.1.tar.gz : e927064dc6c1ceabefc24b88f45f5240f694a698bf5f794d41525a3c362ee11c
+license    : LGPL-2.0
+summary    : Python bindings to goocanvas1
+description: |
+    Python bindings to goocanvas1
+builddeps  :
+    - pkgconfig(pygobject-2.0)
+    - pkgconfig(pygtk-2.0)
+    - pkgconfig(goocanvas)
+    - pkgconfig(python-2.7)
+    - pkgconfig(pycairo)
+rundeps    :
+    - python-gtk2
+    - python-cairo
+setup      : |
+    %configure --disable-static \
+               --disable-docs
+build      : |
+    %make
+install    : |
+    %make_install
