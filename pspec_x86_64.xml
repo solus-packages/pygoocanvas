@@ -2,10 +2,11 @@
     <Source>
         <Name>pygoocanvas</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
         <License>LGPL-2.0</License>
+        <PartOf>programming.python</PartOf>
         <Summary xml:lang="en">Python bindings to goocanvas1</Summary>
         <Description xml:lang="en">Python bindings to goocanvas1
 </Description>
@@ -18,7 +19,7 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/goocanvasmodule.so</Path>
         </Files>
     </Package>
     <Package>
@@ -28,19 +29,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="current">pygoocanvas</Dependency>
+            <Dependency release="2">pygoocanvas</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2015-10-25</Date>
+        <Update release="2">
+            <Date>2017-03-10</Date>
             <Version>0.14.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
